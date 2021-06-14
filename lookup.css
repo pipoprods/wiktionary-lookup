@@ -1,0 +1,67 @@
+#wiktionary-lookup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35em;
+  max-width: 50%;
+  height: 22em;
+  max-height: 50%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  z-index: 999999;
+}
+
+#wiktionary-lookup-container > div.tabs {
+  display: flex;
+  flex-grow: 0;
+  font-size: xx-small;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+#wiktionary-lookup-container > div.tabs > div {
+  flex-grow: 1;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+#wiktionary-lookup-container > div.tabs > div.selected {
+  font-weight: bold;
+  border-bottom: 1px solid #dedede;
+}
+
+#wiktionary-lookup-container > div.definition {
+  flex-grow: 1;
+  overflow: auto;
+  height: calc(100% - 20px);
+  scrollbar-color: lightgray transparent;
+  scrollbar-width: thin;
+  /* Move scrollbars outside */
+  margin-right: -8px;
+  padding-right: 10px;
+  margin-bottom: -8px;
+  padding-bottom: 10px;
+}
+
+#wiktionary-lookup-container > div.definition > div.spacer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#wiktionary-lookup-container div.toc,
+#wiktionary-lookup-container div.sister-wikipedia,
+#wiktionary-lookup-container span.mw-editsection {
+  display: none;
+}

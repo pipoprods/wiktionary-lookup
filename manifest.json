@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+  "name": "Wiktionary Lookup",
+  "version": "1.2",
+
+  "description": "Get selected word definition from Wiktionary",
+
+  "icons": {
+    "48": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lookup.js"],
+      "css": ["lookup.css"]
+    }
+  ],
+
+  "permissions": [
+      "*://*.wiktionary.org/"
+  ]
+
+}
